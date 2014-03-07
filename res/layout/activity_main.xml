@@ -13,6 +13,7 @@
               android:layout_height="wrap_content"
               android:layout_width="match_parent"
               android:layout_weight="1"
+              android:scrollbars="vertical"
               />
 
     <Button android:id="@+id/eventAddButton"
@@ -20,8 +21,7 @@
         android:layout_width="match_parent"
         android:text="@string/title_activity_add_event"
         android:layout_weight=".1"
-        android:onClick="addEvent"
         android:layout_gravity="center_horizontal"/>
-    
+    <!--    android:onClick="addEvent" -->
     
 </LinearLayout>

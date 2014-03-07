@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <TextView
+     android:id="@+id/oneEventName"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="left"
+     android:paddingLeft="20dip"
+     android:text="@string/eventName"
+     android:textSize="20sp"
+     android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/oneEventLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dip"
+        android:text="@string/eventLocation"
+        android:layout_gravity="left"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/oneEventTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:gravity="right"
+        android:paddingLeft="20dip"
+        android:text="@string/eventTime"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/oneEventDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:gravity="right"
+        android:paddingLeft="20dip"
+        android:text="@string/oneEventDescription"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+  
+    <ImageView 
+        android:id="@+id/oneEventImage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher" 
+        android:paddingLeft="20dip"
+        android:layout_weight=".5"
+        android:layout_gravity="center"/>
+    
+  <Button 
+      android:id="@+id/goToMaps"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/goToMaps"
+      android:textSize="20sp"/>
+    
+
+</LinearLayout>

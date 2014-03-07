@@ -5,14 +5,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.example.listmaking.R.layout;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.Button;
@@ -77,41 +81,23 @@ public class MainActivity extends Activity {
 		  myEventAdapter = new EventAdapter(myEvents, this);
 		  lv.setAdapter(myEventAdapter);
 		 registerForContextMenu(lv);   // REGISTER FOR CONTEXT MENU  -- FOR THE OPTIONS ON LIST
-		   
+
 		 // React to user clicks on item
-		    
+	    
 		    lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 		         public void onItemClick(AdapterView<?> parentAdapter, View view, int position,long id) {
-		        	 TextView clickedView = (TextView) view; // We know the View is a TextView so we can cast it
-		        	 Toast.makeText(MainActivity.this, "Item with id ["+id+"] - Position ["+position+"] " + "- Planet ["+clickedView.getText()+"]", Toast.LENGTH_SHORT).show();
+		        	 //TextView clickedView = (TextView) view; // We know the View is a TextView so we can cast it
+		        	 setContentView(R.layout.one_event_layout);
+		        	 //Toast.makeText(MainActivity.this, "Item with id ["+id+"] - Position ["+position+"] " + "- Planet ["+clickedView.getText()+"]", Toast.LENGTH_SHORT).show();
 		     }
-		    });		    
-
+		    });		
+		    
 		    
 		    //user click to add event; just redirect to the addEvent layout.
-//		    public void addEvent(View view) {
-//		    	  final Dialog d = new Dialog(this);
-//		    	   d.setContentView(R.layout.activity_main);
-//		    	   d.setTitle("Add Event");
-//		    	   d.setCancelable(true);
-//		    	   final EditText edit = (EditText) d.findViewById(R.id.editTextPlanet);
-//		    	   Button b = (Button) d.findViewById(R.id.eventAddButton);
-//		    	  
-//		    	   b.setOnClickListener(new View.OnClickListener() {
-//				    	  public void onClick(View v) {
-//				    	         String planetName = edit.getText().toString();
-//				    	         MainActivity.this.planetsList.add(planetName);
-//				    	        // We notify the data model is changed 
-//				    	        MainActivity.this.simpleAdpt.notifyDataSetChanged();
-//				    	        d.dismiss();
-//		    	      }
-//		    	   });
-//		    	   d.show();
-//		    	 }
-	}
 
 	
 	// We want to create a context Menu when the user long click on an item
+	// Replace this by swipe to hide 
 	
 	/*
 	  @Override
@@ -134,6 +120,22 @@ public class MainActivity extends Activity {
 	     
 	  }
 	  */
+		 
+	  Button addEventButton = (Button) findViewById(R.id.eventAddButton);
+	  addEventButton.setOnClickListener(addEvent);
+	  
+	}
+	 
+	//@Override
+	public OnClickListener addEvent = new OnClickListener() {
+	    public void onClick(View v) {
+	      //create a new intent that will launch the new 'page'
+	    setContentView(R.layout.activity_add_event);
+	    }
+	};
+	  
+	  
+	
 	
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {

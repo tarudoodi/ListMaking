@@ -30,7 +30,7 @@ public class Events {
 	
 	public static ArrayList<Events> getList()
 	{
-		for(int i=1;i<4;i++)
+		for(int i=1;i<9;i++)
 		{
 			Events event= new Events();
 			event.eventLocation = "location " + i;

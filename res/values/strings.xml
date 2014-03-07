@@ -26,5 +26,8 @@
     <string name="submitEvent">Done!</string>
     <string name="uploadImage">Upload Event Image</string>
     <string name="title_activity_event_list">EventList</string>
+    <string name="oneEventDescription">Bring friends and family!</string>
+    <string name="eventDescription">Tell everyone more about the event. (160 characters)</string>
+    <string name="goToMaps">Get Directions</string>
 
 </resources>
