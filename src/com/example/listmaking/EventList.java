@@ -25,7 +25,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-import entity.classes.Events;
+import entity.classes.Event;
 
 public class EventList extends Activity {
 	
@@ -54,7 +54,7 @@ public class EventList extends Activity {
 	   SimpleAdapter myEventList;
 	 
 	   
-		   ArrayList<Events> myEvents = Events.getList();
+		   ArrayList<Event> myEvents = Event.getList();
 		   
 	   
 	   

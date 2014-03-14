@@ -19,7 +19,7 @@ MAKE A CLICKABLE ICON FOR LIKE/DISLIKE
 	     android:layout_width="match_parent"
 	     android:layout_height="wrap_content"
 	     android:layout_gravity="left"
-	     android:paddingLeft="20dip"
+ 	     android:paddingLeft="20dip"
 	     android:hint="@string/eventNameWhat"
 	     android:textSize="20sp"
 	     android:textStyle="bold" />
@@ -61,6 +61,7 @@ MAKE A CLICKABLE ICON FOR LIKE/DISLIKE
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_gravity="center_horizontal"/>
+        <!-- android:onClick="submitEvent"/> -->
     
     
     <Button 

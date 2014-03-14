@@ -9,17 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import entity.classes.Events;
+import entity.classes.Event;
 
-public class EventAdapter extends ArrayAdapter<Events> {
+public class EventAdapter extends ArrayAdapter<Event> {
 	   
 //	   private List<events> planetList;
-	   ArrayList<Events> myEvents = Events.getList();
+	   ArrayList<Event> myEvents = Event.getList();
 	   private Context context;
 	    
-	   public EventAdapter(List<Events> myEvents , Context ctx) {
+	   public EventAdapter(List<Event> myEvents , Context ctx) {
 	       super(ctx, R.layout.events_view, myEvents);
-	       this.myEvents = (ArrayList<Events>) myEvents;
+	       this.myEvents = (ArrayList<Event>) myEvents;
 	       this.context = ctx;
 	   }
 	    
@@ -35,7 +35,7 @@ public class EventAdapter extends ArrayAdapter<Events> {
 	           TextView eventNameView = (TextView) convertView.findViewById(R.id.eventName);
 	           TextView eventLocationView = (TextView) convertView.findViewById(R.id.eventLocation);
 	           TextView eventTimeView = (TextView) convertView.findViewById(R.id.eventTime);
-	           Events eventId = myEvents.get(position);
+	           Event eventId = myEvents.get(position);
 	           
 	           //p = planetList.get(position);
 	    
